@@ -1,0 +1,111 @@
+# bundled assets
+
+android/app/src/main/assets/*.bundle
+android/app/src/main/assets/*.map
+android/app/src/main/assets/drawable*
+android/app/src/main/assets/raw
+
+report.*.json
+
+# firebase
+google-services.json
+GoogleService-Info.plist
+
+
+# react-native-config codegen
+ios/tmp.xcconfig
+.env
+!.env.circleci
+
+# sentry
+.sentryclirc
+
+# OSX
+#
+.DS_Store
+
+# Xcode
+
+ios/assets/**/*
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IntelliJ
+
+android/drawable*
+android/raw
+java_pid*
+build/
+.idea
+.gradle
+local.properties
+*.iml
+
+# node.js
+#
+dist/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# BUCK
+buck-out/
+\.buckd/
+**/*.keystore
+!android/app/debug.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+#*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
+*/vendor/bundle
+
+# Bundle artifact
+*.jsbundle
+*.jsbundle.map
+*.index.android.bundle
+*.index.android.bundle.map
+*.index.ios.bundle
+*.index.ios.bundle.map
+*.main.jsbundle
+*.main.jsbundle.map
+
+#jest
+.jest/
+
+#coverage
+coverage/
+
+#npm
+package-lock.json
+
+#Pods
+ios/Pods/
+
+
+#VSCode
+.vscode
+
+#GraphQL fetched scheme (Prevent all queries are allowed in Hasura)
+src/graphql/schema.graphql
