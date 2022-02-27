@@ -1,46 +1,46 @@
 /*
- * This function is a transformer. Receive prev string to cur string
- * @param prev previous raw string for phone number
- * @param cur changed raw string for phone number
+ * This function is a transformer.
+ * @param arg1 previous raw string for phone number
+ * @param arg2 changed raw string for phone number
  * @return valid phone number formmated with hyphen pattern e.g.) 010-0000-0000
  * @author you
  * */
 export default function _______EDIT_________THIS_______ONLY__________(
-  prev: string,
-  cur: string,
+  arg1: string,
+  arg2: string,
 ): string {
-  if (cur.length === prev.length + 1) {
+  if (arg2.length === arg1.length + 1) {
     // added
 
     // no need change
-    if (cur.length === 13) {
-      return cur;
+    if (arg2.length === 13) {
+      return arg2;
     }
 
     // upper length
-    if (cur.length > 13) {
-      return prev;
+    if (arg2.length > 13) {
+      return arg1;
     }
 
     // list 1,2,5,6,7,10,11,12 means no need hyphen appended
-    if ([1, 2, 5, 6, 7, 10, 11, 12].includes(cur.length)) {
-      return cur;
+    if ([1, 2, 5, 6, 7, 10, 11, 12].includes(arg2.length)) {
+      return arg2;
     }
     // list 3,8 means it needs hyphen appended
-    if ([3, 8].includes(cur.length)) {
-      return cur + '-';
+    if ([3, 8].includes(arg2.length)) {
+      return arg2 + '-';
     }
-  } else if (cur.length === prev.length - 1) {
+  } else if (arg2.length === arg1.length - 1) {
     // removed
-    if (cur.length === 0) {
+    if (arg2.length === 0) {
       return '';
     }
 
-    if ([4, 9].includes(prev.length)) {
-      return cur.substring(0, cur.length - 1);
+    if ([4, 9].includes(arg1.length)) {
+      return arg2.substring(0, arg2.length - 1);
     }
 
-    return cur;
+    return arg2;
   }
 
   return '';
