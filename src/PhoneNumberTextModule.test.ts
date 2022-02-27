@@ -1,5 +1,5 @@
 import {ERROR_LIST, black_box_curry as _black_box_curry} from './checker/zz';
-import {PhoneNumberTextReplacer} from './PhoneNumberTextModule';
+import PhoneNumberTextReplacer from './PhoneNumberTextModule';
 
 const __black_box_curry = _black_box_curry(PhoneNumberTextReplacer);
 

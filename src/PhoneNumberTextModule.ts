@@ -5,7 +5,7 @@
  * @return valid phone number formmated with hyphen pattern e.g.) 010-0000-0000
  * @author you
  * */
-function _______EDIT_________THIS_______ONLY__________(
+export default function _______EDIT_________THIS_______ONLY__________(
   prev: string,
   cur: string,
 ): string {
@@ -45,7 +45,3 @@ function _______EDIT_________THIS_______ONLY__________(
 
   return '';
 }
-
-// DO NOT REMOVE EXPORT
-export const PhoneNumberTextReplacer =
-  _______EDIT_________THIS_______ONLY__________;

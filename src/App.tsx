@@ -11,8 +11,7 @@
 import React, {useState} from 'react';
 import {TextInput, View, Button} from 'react-native';
 import {black_box_curry} from './checker/zz';
-import {PhoneNumberTextReplacer as _PhoneNumberTextReplacer} from './PhoneNumberTextModule';
-
+import _PhoneNumberTextReplacer from './PhoneNumberTextModule';
 const PhoneNumberTextReplacer = black_box_curry(_PhoneNumberTextReplacer);
 
 const App = () => {
