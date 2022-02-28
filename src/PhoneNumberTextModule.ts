@@ -2,7 +2,7 @@ export default function formatPhoneNumber(
   previous: string,
   current: string,
 ): string {
-  if (!isValidArguments(previous, current) || noChange(previous, current)) {
+  if (isInvalidArguments(previous, current) || noChange(previous, current)) {
     return previous;
   }
 
@@ -21,18 +21,11 @@ export default function formatPhoneNumber(
   }
 }
 
-function isValidArguments(previous: any, current: any): boolean {
-  if (
-    isNotString(previous) ||
-    isNotString(current) ||
-    overMaxLength(previous) ||
-    overMaxLength(current) ||
-    includesInvalidCharacters(previous) ||
-    includesInvalidCharacters(current)
-  ) {
-    return false;
-  }
-  return true;
+function isInvalidArguments(previous: any, current: any): boolean {
+  return [previous, current].some(
+    str =>
+      isNotString(str) || overMaxLength(str) || includesInvalidCharacters(str),
+  );
 
   function isNotString(str: any): boolean {
     return typeof str !== 'string';
