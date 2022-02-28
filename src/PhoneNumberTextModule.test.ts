@@ -97,8 +97,7 @@ describe("CASE 3. EDGE CASE DOESN'T INVOKE ERROR", () => {
   });
 });
 
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('CASE 4. ADVANCED', () => {
+describe('CASE 4. ADVANCED', () => {
   it('TEST 9 - COPY?', () => {
     const testCases: TestCase[] = [
       ['', '010-1234-1234', '010-1234-1234'],
