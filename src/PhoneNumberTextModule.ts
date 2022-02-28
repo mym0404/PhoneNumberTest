@@ -35,8 +35,7 @@ function isValidArguments(previous: any, current: any): boolean {
   return true;
 
   function isNotString(str: any): boolean {
-    const ret = typeof str;
-    return ret !== 'string';
+    return typeof str !== 'string';
   }
 
   function overMaxLength(str: string): boolean {
